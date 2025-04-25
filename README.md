@@ -207,7 +207,23 @@ main()
 ```
 
 # Images
-[[results/gantt.png]]
+Charts
+
+Below are the generated charts (stored in the results folder):
+
+
+Figure: Gantt chart of machine utilization.
+
+
+Figure: Bar chart of per-order lateness.
+
+
+Figure: On-time count, average lateness, and cost over iterations.
+
+
+Figure: Pie chart of heuristic usage.
+
+
 ---
 
 ## Output Files
