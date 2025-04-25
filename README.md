@@ -17,6 +17,14 @@ A Monte Carlo–based production scheduler that assigns orders to cutting, sewin
 
 ---
 
+## Run Online on Google Colab
+
+You can also run the scheduler directly in Google Colab:
+
+[Open in Colab](https://colab.research.google.com/drive/1SqpVtOIqhufSfgmtPSSYvwvUd-LqcmtE?usp=sharing)
+
+---
+
 ## Requirements
 
 Install dependencies from `requirements.txt`:
