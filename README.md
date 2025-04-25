@@ -213,7 +213,7 @@ Below are the generated charts (stored in the results folder):
 
 
 Figure: Gantt chart of machine utilization.
-
+![Machine Gantt Chart](results/gantt.png)
 
 Figure: Bar chart of per-order lateness.
 
