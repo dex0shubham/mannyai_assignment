@@ -152,9 +152,16 @@ Charts are written to the output directory (`--out`).
    - Apply setup times if switching product types on a machine.
    - Record start/end times per stage and compute lateness (`max(0, finish_time - deadline)`).
 4. **Monte Carlo Optimization**:
-   - Generate many random permutations of the order list using three heuristics: deadlines first, product grouping, or total processing time.
-   - Simulate each schedule and compute a cost function: `weight * avg_lateness - (1-weight) * on_time_count`.
-   - Retain the permutation with the lowest cost as the **best** schedule.
+   - **Heuristics**: generate many random permutations of the order list using three methods: deadlines first, product grouping, or total processing time.
+   - **Simulation**: for each permutation, simulate the schedule and collect:
+     1. **Average Lateness**: the mean lateness across all orders.
+     2. **On-Time Count**: the number of orders that finished by their deadline.
+   - **Cost Function**: combine these metrics into a single cost value:
+     ```text
+     cost = weight * avg_lateness - (1 - weight) * on_time_count
+     ```
+     where `weight` ∈ [0,1] balances minimizing lateness vs. maximizing on-time orders.
+   - **Selection**: keep the permutation with the lowest cost as the **best** schedule.
 5. **Result Aggregation**:
    - Build a per-order lateness summary DataFrame.
    - Calculate total on-time orders and average lateness (optionally converted to days).
@@ -201,3 +208,4 @@ main()
 - `heuristic_dist.png`: Pie chart of heuristic usage.
 
 ---
+
