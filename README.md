@@ -206,6 +206,8 @@ main()
  └─ plot_*() functions for charts
 ```
 
+# Images
+[[results/gantt.png]]
 ---
 
 ## Output Files
