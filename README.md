@@ -213,15 +213,19 @@ Below are the generated charts (stored in the results folder):
 
 
 Figure: Gantt chart of machine utilization.
+
 ![Machine Gantt Chart](results/gantt.png)
 
 Figure: Bar chart of per-order lateness.
+
 ![Machine Gantt Chart](results/lateness_dist.png)
 
 Figure: On-time count, average lateness, and cost over iterations.
+
 ![Machine Gantt Chart](results/progress.png)
 
 Figure: Pie chart of heuristic usage.
+
 ![Machine Gantt Chart](results/heuristic_dist.png)
 
 ---
