@@ -36,15 +36,24 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python schedule_optimizer.py <input_file> [options]
+python more_schedule.py C:\Users\rhira\MannyAI\pythonProject\data.xlsx --cut 2 --sew 3 --pack 1 -n 5000 --out C:\Users\rhira\MannyAI\pythonProject\results
 ```
 
 - `<input_file>`: Path to Excel (.xls/.xlsx) or CSV file of orders.
 
 Optional arguments:
 
-| Flag        | Description                                              | Default |
-|-------------|----------------------------------------------------------|---------|
+| Flag        | Description                                              | Default              |
+|-------------|----------------------------------------------------------|----------------------|
+| `--cut N`   | Number of cutting tables                                 | 2                    |
+| `--sew N`   | Number of sewing machines                                | 3                    |
+| `--pack N`  | Number of packing stations                               | 1                    |
+| `-n N`      | Monte Carlo iterations                                   | 500 (override: 5000) |
+| `--seed N`  | Random seed                                              | 42                   |
+| `--weight w`| Weight for average lateness in cost function (0..1)      | 0.5                  |
+| `--out DIR` | Output folder for charts and results summary             | results              |
+
+-------------|----------------------------------------------------------|---------|
 | `--cut N`   | Number of cutting tables                                 | 2       |
 | `--sew N`   | Number of sewing machines                                | 3       |
 | `--pack N`  | Number of packing stations                               | 1       |
@@ -192,4 +201,3 @@ main()
 - `heuristic_dist.png`: Pie chart of heuristic usage.
 
 ---
-
